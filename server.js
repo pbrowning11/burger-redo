@@ -35,7 +35,7 @@ connection.connect(function (err) {
     console.log("connected as id " + connection.threadId);
 });
 
-app.use(express.static('public'))
+app.use(express.static('./public'))
 
 app.get("/", function (req, res) {
     connection.query("SELECT * FROM burgers", function (err, data) {
